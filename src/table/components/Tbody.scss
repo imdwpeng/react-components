@@ -1,0 +1,32 @@
+.cow__table-border {
+  td {
+    border-right: 1px solid #eee;
+    &:last-of-type {
+      border-right: 0;
+    }
+  }
+  tr:last-of-type td {
+    border-bottom: 0;
+  }
+  .cow__table--left {
+    td:last-of-type {
+      border-right: 1px solid #eee;
+    }
+  }
+  .cow__table--right {
+    td:last-of-type {
+      border-left: 1px solid #eee;
+    }
+  }
+}
+
+.cow__tbody {
+  td {
+    padding: 10px 12px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    border-bottom: 1px solid #eee;
+    color: rgba(0, 0, 0, .7);
+  }
+}

@@ -1,0 +1,129 @@
+/*selectInput*/
+.cow__select {
+    position: relative;
+}
+
+.cow__select .cow__select-list-box {
+    position: absolute;
+    min-width: 100%;
+}
+
+.cow__select .cow__select-input {
+    position: relative;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    cursor: pointer;
+    z-index: 2000;
+}
+
+.cow__select .cow__select-input .cow__select-show {
+    display: block;
+    padding: 4px 20px 4px 10px;
+    width: 100%;
+    height: 100%;
+    font-size: 14px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.cow__select .cow__select-input > .icon-slide {
+    position: absolute;
+    top: 50%;
+    right: 4px;
+    font-size: 12px;
+    transform: translateY(-50%) rotate(0);
+    transition: all 500ms;
+}
+
+.cow__select .cow__select-input > .icon-slide.icon-up {
+    transform: translateY(-50%) rotate(180deg);
+}
+
+/*searchInput*/
+.cow__select .cow__search-input {
+    position: relative;
+    margin-top: 2px;
+    border: 1px solid #ddd;
+    border-bottom: 0;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    z-index: 2000;
+}
+
+.cow__select .cow__search-input > input {
+    padding: 6px 25px;
+    border: none;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    width: 100%;
+}
+
+.cow__select .cow__search-input > input:focus {
+    outline: none;
+}
+
+.cow__select .cow__search-input > .icon-search,
+.cow__select .cow__search-input > .icon-delete {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #ddd;
+}
+
+.cow__select .cow__search-input > .icon-search {
+    left: 4px;
+}
+
+.cow__select .cow__search-input > .icon-delete {
+    right: 4px;
+    cursor: pointer;
+}
+
+/*selectList*/
+.cow__select .cow__select-list {
+    max-height: 200px;
+    font-size: 12px;
+    border: 1px solid #ddd;
+    overflow-y: auto;
+}
+
+.cow__select .cow__select-list > ul {
+    position: relative;
+    margin: 0;
+    padding: 0 10px;
+    z-index: 2000;
+}
+
+.cow__select .cow__select-list > ul > li {
+    padding: 3px 6px;
+    border-radius: 4px;
+}
+
+.cow__select .cow__select-list > ul > li:first-of-type {
+    margin-top: 10px;
+}
+
+.cow__select .cow__select-list > ul > li:last-of-type {
+    margin-bottom: 10px;
+}
+
+.cow__select .cow__select-list > ul > li:hover {
+    background: rgba(113, 173, 239, 0.14);
+}
+
+.cow__select .cow__select-list > ul > li.cow__select-li-active {
+    color: #fff;
+    background: #399bff;
+}
+
+/*遮罩层*/
+.cow__select .cow__select-shade {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+}
+
