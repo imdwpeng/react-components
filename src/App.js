@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import Table from './table/Table';
 
 const columns = [
-    {key: 'groupName', title: '分组', stretch: true,className: 'cow_class', fixed: 'left', sort: true},
+    {key: 'groupName', title: '分组', stretch: true, className: 'cow_class', fixed: 'left', sort: true},
     {key: 'name', title: '任务名称', width: 150},
     {key: 'cron', title: 'cron', stretch: true, sort: true},
     {key: 'method', title: '执行方法', fixed: 'right', stretch: true},
@@ -136,6 +136,7 @@ class App extends Component {
         return (
             <div style={{margin: 100, width: 600}}>
                 <Table
+                    height={200}
                     message="暂无数据"
                     no
                     affix

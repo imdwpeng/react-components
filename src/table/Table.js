@@ -453,7 +453,7 @@ class Table extends Component {
 
     render() {
         const {ifRender, pagination, leftColumns, mainColumns, rightColumns, dataSource, ifScroll, trHeight, stretch, delta, sort, tableWidth, tableHeight, outWidth, outHeight} = this.state;
-        const {affix, border, widthAuto, loading, message} = this.props;
+        const {height, affix, border, widthAuto, loading, message} = this.props;
         const columns = leftColumns.concat(mainColumns, rightColumns);
         const outClassName = classnames(
             'cow__table-layout',
@@ -473,7 +473,7 @@ class Table extends Component {
         }
 
         return (
-            <div style={{height: '100%'}}>
+            <div style={{height: height || '100%'}}>
                 <div
                     className={outClassName}
                     style={{height: pagination && pagination.total && trHeight.tbody.length ? `calc(100% - 60px)` : ''}}
