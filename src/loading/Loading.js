@@ -8,6 +8,7 @@
  */
 import React, {Component} from 'react';
 import Icon from '../icon/Icon';
+
 import './Loading.scss';
 
 class Loading extends Component {

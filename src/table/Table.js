@@ -10,8 +10,11 @@
  *  dataSource={dataSource}  列表数据
  *  columns={columns}  表头数据
  *  pagination={pagination}  分页数据
+<<<<<<< HEAD
  *  loading: 加载中
  *  message: dataSource为空时的提示信息
+=======
+>>>>>>> fac9bf3f133819a0b51eab963c14f9ecb03a69d0
  * }
  */
 import React, {Component} from 'react';
@@ -418,6 +421,7 @@ class Table extends Component {
      *  key:排序项
      */
     handleSort = (type, key) => {
+
         const {dataSource} = this.state;
 
         dataSource.sort((a, b) => {

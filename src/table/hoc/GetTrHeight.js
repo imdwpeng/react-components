@@ -20,7 +20,6 @@ const GetTrHeight = WrapperComponent => class extends Component {
             }
         }
         this.props.onGetHeight && this.props.onGetHeight(iHeight, type);
-
     };
 
     render() {

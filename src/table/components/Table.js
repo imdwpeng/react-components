@@ -11,6 +11,7 @@ import './Table.scss';
 class TableMain extends Component {
     render() {
         const {ifRender,columns, dataSource, dataType, trHeight, delta, sort, affix, widthAuto, onGetHeight, onStartStretch, onSort} = this.props;
+
         const className = classnames({
             'cow__table--left': dataType === 'left',
             'cow__table--right': dataType === 'right',
@@ -18,6 +19,7 @@ class TableMain extends Component {
             'cow__table--auto': widthAuto,
             'cow__table--shadow': delta.deltaX
         });
+
         const fixedClassName = classnames(
             'cow__table--fixed',
             {
