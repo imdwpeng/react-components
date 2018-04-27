@@ -1,0 +1,26 @@
+.cow__scroll-bar-wrap {
+    position: relative;
+    background: rgba(45, 45, 45, 0.15);
+    z-index: 3000;
+}
+
+.cow__scroll-bar--y {
+    width: 8px;
+    height: 100%;
+}
+
+.cow__scroll-bar--x {
+    width: 100%;
+    height: 8px;
+}
+
+.cow__scroll-bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(45, 45, 45, 0.5);
+    border-radius: 8px;
+    cursor: pointer;
+}

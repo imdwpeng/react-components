@@ -1,0 +1,53 @@
+.cow__table {
+  position: relative;
+}
+
+.cow__table--left {
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: #fff;
+  z-index: 1000;
+}
+
+.cow__table--right {
+  position: absolute;
+  right: 0;
+  top: 0;
+  background: #fff;
+  z-index: 1000;
+}
+
+.cow__table--left.cow__table--shadow {
+  box-shadow: 3px 0px 5px rgba(0, 0, 0, 0.18) !important;
+}
+
+.cow__table--right.cow__table--shadow {
+  box-shadow: -3px 0px 5px rgba(0, 0, 0, 0.18) !important;
+}
+
+.cow__table-main {
+  table-layout: fixed;
+  width: 1px;
+}
+
+.cow__table--fixed {
+  @extend .cow__table-main;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 1000;
+}
+
+.cow__table--auto {
+  .cow__table-main,
+  .cow__table--fixed {
+    width: 100%;
+  }
+}
+
+.cow__table--fixed.cow__table--shadow {
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.28);
+}
+
+

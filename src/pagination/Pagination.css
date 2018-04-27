@@ -1,0 +1,80 @@
+.cow__page-ul {
+    margin: 15px 0;
+    padding: 0;
+    user-select: none;
+}
+
+.cow__page-ul .cow__page-li {
+    display: inline-block;
+    margin-right: 8px;
+    width: 28px;
+    height: 28px;
+    line-height: 28px;
+    text-align: center;
+    font-size: 12px;
+    border: 1px solid #e9e9e9;
+    border-radius: 2px;
+    list-style-type: none;
+}
+
+.cow__page-ul .cow__page-li:last-of-type {
+    margin-right: 0;
+}
+
+.cow__page-ul .cow__page-li:not(.cow__page-dot):not(.cow__page-change):not(.cow__page-active):hover {
+    color: #0f8ee9;
+    border-color: #0f8ee9;
+    cursor: pointer;
+}
+
+.cow__page-ul .cow__page-active {
+    color: #fff;
+    background: #0f8ee9;
+    border-color: #0f8ee9;
+}
+
+.cow__page-ul li.cow__page-active:hover {
+    color: #fff;
+}
+
+.cow__page-ul .cow__page-dot {
+    border: 0;
+    cursor: default;
+}
+
+.cow__page-ul .cow__page-change {
+    width: unset;
+    vertical-align: middle;
+    border: none;
+}
+
+.cow__page-ul .cow__page-input {
+    margin: 0 5px;
+    width: 30px;
+    border: 1px solid #ddd;
+    border-radius: 2px;
+}
+
+.cow__page-ul .cow__page-button {
+    margin: 0 5px;
+}
+
+.cow__page-ul .cow__page-change .cow__select,
+.cow__page-ul .cow__page-change .cow__select .cow__select-input {
+    height: 100%;
+    min-width: 60px;
+}
+
+.cow__page-ul .cow__page-change .cow__select .cow__select-input .cow__select-show {
+    line-height: 18px;
+}
+
+/* === 选择器 === */
+.cow__page-ul .cow__select-input {
+    border-radius: 2px;
+}
+
+.cow__page-ul .cow__select-show {
+    box-sizing: border-box;
+}
+

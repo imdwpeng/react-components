@@ -1,0 +1,42 @@
+.cow__table-layout {
+  display: inline-block;
+  position: relative;
+  max-width: 100%;
+  height: 200px;
+  font-size: 14px;
+  overflow: hidden;
+}
+
+.cow__table-border {
+  border-left: 1px solid #eee;
+  border-right: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+}
+
+.cow__table-line {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 2px;
+  height: 100%;
+  background: #068df5;
+  z-index: 2000;
+}
+
+.cow__table--no-select {
+  user-select: none;
+}
+
+.cow__table-scrollbar--x {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+.cow__table-scrollbar--y {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  box-sizing: border-box;
+}

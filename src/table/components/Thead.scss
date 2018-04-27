@@ -1,0 +1,72 @@
+.cow__table-border {
+  th {
+    border-top: 1px solid #eee;
+    border-right: 1px solid #eee;
+    &:last-of-type {
+      border-right: 0;
+    }
+  }
+  .cow__table--left {
+    th:last-of-type {
+      border-right: 1px solid #eee;
+    }
+  }
+  .cow__table--right {
+    th:last-of-type {
+      border-left: 1px solid #eee;
+    }
+  }
+}
+
+.cow__thead {
+  th {
+    position: relative;
+    padding: 10px 12px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+    background: #fafafa;
+    box-sizing: border-box;
+  }
+  &-stretch {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 6px;
+    height: 100%;
+    cursor: col-resize;
+  }
+  &-sort {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    flex-wrap: wrap;
+    position: absolute;
+    top: 0;
+    right: 6px;
+    width: 10px;
+    height: 100%;
+  }
+  th:hover &-sort,
+  &-sort.cow--active {
+    display: flex;
+  }
+  .cow__sort-up,
+  .cow__sort-down {
+    flex-basis: 100%;
+    font-size: 12px;
+    transform: scale(.8);
+    color: rgba(0, 0, 0, .2);
+    cursor: pointer;
+  }
+  .cow__sort-up.cow--active,
+  .cow__sort-down.cow--active {
+    color: rgba(0, 0, 0, .8);
+  }
+  .cow__sort-down {
+    margin-top: -6px;
+  }
+}
