@@ -201,7 +201,13 @@ const selectDecorator = WrappedComponent => {
                 selectedName: e.target.innerHTML
             });
             this.props.onSlideToggle();
-        }
+
+            this.props.onChange &&
+            this.props.onChange({
+                value: e.target.getAttribute('data-idx'),
+                name: e.target.innerHTML
+            });
+        };
 
         render() {
 

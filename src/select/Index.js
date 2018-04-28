@@ -13,10 +13,15 @@ import React, {Component} from 'react';
 import Select from './Select';
 
 class App extends Component {
+
+    handleChange = (item) => {
+        console.log(item);
+    };
+
     render() {
         return (
-            <div style={{margin:'100px auto',width:200}}>
-                <Select name="test" search>
+            <div style={{margin: '100px auto', width: 200}}>
+                <Select name="test" search onChange={this.handleChange}>
                     <option data-name="123" value="-1">--请选择--</option>
                     <option value="1">北京</option>
                     <option value="2">上海</option>

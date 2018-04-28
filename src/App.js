@@ -130,7 +130,10 @@ class App extends Component {
         const pagination = {
             current: 1,
             pageSize: 5,
-            total: 100
+            total: 100,
+            onClick:(page)=>{
+                console.log(page)
+            }
         };
 
         return (

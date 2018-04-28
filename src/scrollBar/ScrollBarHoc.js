@@ -50,7 +50,7 @@ const ScrollBarHoc = WrapperComponent => class extends Component {
             iDelta = iPosition / ratio;
 
             // 返回滚动类型和被卷去的距离
-            this.props.onscroll && this.props.onscroll({type, iDelta, status: true});
+            this.props.onScroll && this.props.onScroll({type, iDelta, status: true});
 
             this.setState({
                 scroll: {
@@ -71,7 +71,7 @@ const ScrollBarHoc = WrapperComponent => class extends Component {
             if (scroll.status) {
                 scroll.status = false;
 
-                this.props.onscroll && this.props.onscroll({status: false});
+                this.props.onScroll && this.props.onScroll({status: false});
 
                 this.setState({scroll})
             }
@@ -83,7 +83,8 @@ const ScrollBarHoc = WrapperComponent => class extends Component {
     }
 
     _init = (props) => {
-        const {mainTotal, mainContent, scrollTotal, delta, type} = props,
+        const {mainTotal, mainContent, delta, type} = props,
+            scrollTotal = props.scrollTotal ? props.scrollTotal : mainContent,
             ratio = scrollTotal / mainTotal || 0,
             scrollContent = ratio * mainContent;
 

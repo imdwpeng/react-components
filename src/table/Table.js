@@ -2,7 +2,6 @@
  * Created by Eric on 2018/4/23.
  * @params:{
  *  widthAuto: 宽度自适应
- *  loading: 加载中
  *  no: 序号
  *  affix: thead置顶
  *  border: 边框
@@ -10,11 +9,8 @@
  *  dataSource={dataSource}  列表数据
  *  columns={columns}  表头数据
  *  pagination={pagination}  分页数据
-<<<<<<< HEAD
  *  loading: 加载中
  *  message: dataSource为空时的提示信息
-=======
->>>>>>> fac9bf3f133819a0b51eab963c14f9ecb03a69d0
  * }
  */
 import React, {Component} from 'react';
@@ -545,7 +541,7 @@ class Table extends Component {
                             mainTotal={tableWidth}
                             mainContent={outWidth}
                             scrollTotal={outWidth}
-                            onscroll={this.handleScroll}
+                            onScroll={this.handleScroll}
                         />
                     }
 
@@ -565,7 +561,7 @@ class Table extends Component {
                                 mainTotal={tableHeight}
                                 mainContent={outHeight}
                                 scrollTotal={affix ? outHeight - trHeight.thead[0] : outHeight}
-                                onscroll={this.handleScroll}
+                                onScroll={this.handleScroll}
                             />
                         </div>
                     }
@@ -573,7 +569,7 @@ class Table extends Component {
                     {
                         // loading
                         loading &&
-                        <Loading className="cow__table--loading"/>
+                        <Loading type={loading.type || 'loading'} className="cow__table--loading"/>
                     }
 
                     {
